@@ -13,6 +13,7 @@
 		0CF79CC2204552DB0041C819 /* viewControllerLifecycle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0CF79CC0204552DB0041C819 /* viewControllerLifecycle.xcdatamodeld */; };
 		0CF79CC4204552DB0041C819 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CF79CC3204552DB0041C819 /* Assets.xcassets */; };
 		0CF79CC7204552DB0041C819 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CF79CC5204552DB0041C819 /* LaunchScreen.storyboard */; };
+		0CF79CCF20457C210041C819 /* FoodTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF79CCE20457C210041C819 /* FoodTrackerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0CF79CC3204552DB0041C819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CF79CC6204552DB0041C819 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CF79CC8204552DB0041C819 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CF79CCE20457C210041C819 /* FoodTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,31 @@
 			isa = PBXGroup;
 			children = (
 				0CF79CB9204552DB0041C819 /* AppDelegate.swift */,
-				0CF79CBB204552DB0041C819 /* ViewController.swift */,
 				0CF79CBD204552DB0041C819 /* Main.storyboard */,
-				0CF79CC3204552DB0041C819 /* Assets.xcassets */,
-				0CF79CC5204552DB0041C819 /* LaunchScreen.storyboard */,
+				0CF79CD2204594CF0041C819 /* Controllers */,
+				0CF79CD3204594E40041C819 /* Supporting Files */,
 				0CF79CC8204552DB0041C819 /* Info.plist */,
-				0CF79CC0204552DB0041C819 /* viewControllerLifecycle.xcdatamodeld */,
 			);
 			path = viewControllerLifecycle;
+			sourceTree = "<group>";
+		};
+		0CF79CD2204594CF0041C819 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0CF79CBB204552DB0041C819 /* ViewController.swift */,
+				0CF79CCE20457C210041C819 /* FoodTrackerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0CF79CD3204594E40041C819 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0CF79CC3204552DB0041C819 /* Assets.xcassets */,
+				0CF79CC5204552DB0041C819 /* LaunchScreen.storyboard */,
+				0CF79CC0204552DB0041C819 /* viewControllerLifecycle.xcdatamodeld */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CF79CC2204552DB0041C819 /* viewControllerLifecycle.xcdatamodeld in Sources */,
+				0CF79CCF20457C210041C819 /* FoodTrackerViewController.swift in Sources */,
 				0CF79CBC204552DB0041C819 /* ViewController.swift in Sources */,
 				0CF79CBA204552DB0041C819 /* AppDelegate.swift in Sources */,
 			);
