@@ -47,25 +47,25 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
 
-        print("viewWillAppear() --------: View is about to be in veiw hierarchy :)")
+        print("MealViewController: viewWillAppear() --------: View is about to be in veiw hierarchy :)")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        print("viewDidAppear() --------: View is added in veiw hierarchy :)")
+        print("MealViewController: viewDidAppear() --------: View is added in veiw hierarchy :)")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         
-        print("viewWillDisappear() --------: View is about to be removed from veiw hierarchy :(")
+        print("MealViewController: viewWillDisappear() --------: View is about to be removed from veiw hierarchy :(")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
         
-        print("viewDidDisappear() --------: View is removed from veiw hierarchy :(")
+        print("MealViewController: viewDidDisappear() --------: View is removed from veiw hierarchy :(")
     }
 
     override func didReceiveMemoryWarning() {
@@ -105,7 +105,18 @@ class MealViewController: UIViewController, UITextFieldDelegate, UIImagePickerCo
     }
     
     @IBAction func cancelButtonTapped(_ sender: Any){
-        dismiss(animated: true, completion: nil)
+        // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
+        
+        //To check whether the to this view controller cuase be add button or not
+        let isPresentingInAddMealMode = presentingViewController is UINavigationController
+        if isPresentingInAddMealMode{
+            dismiss(animated: true, completion: nil)
+        } else if let owningNavigationController = navigationController{
+            //The else block is called if the user is editing an existing meal.
+            owningNavigationController.popViewController(animated: true)
+        } else {
+            fatalError("The MealViewController is not inside a navigation controller.")
+        }
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
